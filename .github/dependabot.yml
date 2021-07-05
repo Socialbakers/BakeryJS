@@ -1,0 +1,30 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "09:00"
+    timezone: Europe/Prague
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: ajv
+    versions:
+    - ">= 7.a, < 8"
+  - dependency-name: async
+    versions:
+    - "> 2.6.2"
+  - dependency-name: "@types/async"
+    versions:
+    - "> 2.4.1"
+  - dependency-name: "@types/node"
+    versions:
+    - ">= 13.a, < 14"
+  - dependency-name: ajv
+    versions:
+    - 8.0.1
+    - 8.0.5
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 8.0.0
+    - 8.1.0
